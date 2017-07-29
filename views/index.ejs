@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nightlife Coordination</title>
+        <link href="index.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="navbar-content">
+                Nightlife Coordination
+                
+                <span id="navbar-input-text"></span>
+                
+                <% if (user) {%>
+                    <span>
+                        <span id="user-identification" data-id="<%= user.twitter.id %>"> </span><%= user.twitter.name %> | <a href="/logout">Logout</a>
+                    </span>
+                <% } else {%>
+                    <a href="/auth/twitter">Login</a>
+                <% }%>
+            </div>
+        </div>
+        <div class="main-form">
+            <h1>Nightlife Coordination - FCC</h1>
+            <h2>
+                Hello, 
+                <% if (user) {%>
+                    <span id="user-identification" data-id="<%= user.twitter.id %>"> </span><%= user.twitter.name %> | <a href="/logout">Logout</a>
+                <% } else {%>
+                    stranger | <a href="/auth/twitter">Login</a>
+                <% }%>
+            </h2>
+            Type your location to search for good places to hang out! If you log in you can also like your favorite places.<br>
+            <input size=60 type="text" id="location" placeholder="Type your location here" value='<%= user ? user.lastSearch : '' %>'></input>
+        </div>
+        <div id="result"></div>
+        
+        <script type="text/javascript" src="ajax_calls.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>

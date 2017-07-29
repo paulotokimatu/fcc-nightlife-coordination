@@ -1,0 +1,100 @@
+body {
+    font-family: 'Bree Serif', serif;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
+.navbar {
+    position: fixed;
+    display: none;
+    width: 100%;
+    background: #4e0110;
+    color: #d9dcd6;
+}
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.main-form {
+    padding: 60px 0;
+    background: #4e0110;
+    color: #d9dcd6;
+    text-align: center;
+}
+.main-form h1 {
+    font-size: 2.75em;
+    margin-top: 0;
+}
+.main-form input {
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 10px 0;
+}
+#result {
+    width: 80%;
+    max-width: 950px;
+    margin: auto;
+    padding: 25px;
+}
+
+.one-place {
+    display: flex;
+    justify-content: space-between;
+    background: #fad8d6;
+    color: #080708;
+    padding: 25px;
+    margin: 10px 0;
+}
+.one-place-general-info {
+    display: flex;
+}
+.one-place-general-info h2 {
+    display: inline-block; 
+    margin: 0;
+}
+.one-place-general-no-img {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 15px;
+}
+
+.one-place-like-components {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.num-likes {
+    margin-right: 10px;
+}
+
+.one-place-like-components button {
+    background: #4e0110;
+    color: #d9dcd6;
+    border: 0;
+    cursor: pointer;
+    height: 30px;
+    font-size: inherit;
+    text-transform: capitalize;
+    transition: opacity 0.3s;
+}
+.one-place-like-components button:hover {
+    opacity: 0.7;
+}
+
+.like-status {
+    height: 30px;
+    width: 30px;
+}
+.active {
+    background: #ff4a1c;
+}
+.inactive {
+    background: #aba8b0;
+}
